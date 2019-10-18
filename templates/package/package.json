@@ -1,0 +1,36 @@
+{
+	"name": "@peakfijn/modulename",
+	"version": "0.0.0",
+	"description": "moduledescription",
+	"keywords": [
+		"modulename",
+		"peakfijn"
+	],
+	"author": "Cedric van Putten <cedric@peakfijn.nl>",
+	"license": "MIT",
+	"homepage": "https://github.com/peakfijn/template-next/tree/master/packages/modulename#readme",
+	"bugs": {
+		"url": "https://github.com/peakfijn/template-next/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/peakfijn/template-next.git"
+	},
+	"directories": {
+		"lib": "src",
+		"tests": "tests"
+	},
+	"main": "build/index.js",
+	"files": [
+		"build"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@testing-library/react": "^9.3.0",
+		"@types/jest": "^24.0.19",
+		"@types/react": "^16.9.7",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
+		"react-test-renderer": "^16.10.2"
+	}
+}
