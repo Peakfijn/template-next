@@ -1,0 +1,27 @@
+---
+name: Template CI
+on:
+  pull_request:
+    paths:
+      - 'template/**'
+jobs:
+  ci:
+    name: Install, validate and build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: [10, 12]
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+        working-directory: template
+      - run: npm run lint
+        working-directory: template
+      - run: npm run test
+        working-directory: template
+      - run: npm run build
+        working-directory: template
