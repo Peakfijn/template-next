@@ -9,7 +9,7 @@
 	"scripts": {
 		"postinstall": "lerna bootstrap",
 		"test": "jest",
-		"lint": "eslint ./templates/package --ext js,jsx,ts,tsx",
+		"lint": "eslint ./packages ./templates/package --ext js,jsx,ts,tsx",
 		"start": "tsc --watch",
 		"build": "tsc --build",
 		"clean": "tsc -b --clean && lerna clean --yes && lerna exec 'git clean -xdf build package-lock.json'",
