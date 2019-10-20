@@ -5,6 +5,12 @@ on:
     paths:
       - 'templates/**'
       - '!templates/package/**'
+  push:
+    branches:
+      - develop
+    paths:
+      - 'templates/**'
+      - '!templates/package/**'
 jobs:
   ci:
     name: Install, validate and build
