@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const fs = require('fs');
+const path = require('path');
 const LernaProject = require('@lerna/project');
-const extraScopes = [
-	'template/package',
-	'template/project',
-];
 
 module.exports = {
 	extends: ['@peakfijn/config-commitlint'],
@@ -15,15 +13,26 @@ module.exports = {
 };
 
 // see: https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-lerna-scopes/index.js
-function getScopeRule(context = {}) {
-	const project = new LernaProject(context.cwd || process.cwd());
+async function getScopeRule(context = {}) {
+	const packages = await getPackageScopes(context);
+	const templates = getTemplateScopes(context);
 
-	return project.getPackages()
-		.then(packages => (
-			packages
-				.map(pkg => pkg.name)
-				.map(name => (name.charAt(0) === '@' ? name.split('/')[1] : name))
-				.concat(extraScopes)
-		))
-		.then(scopes => [2, 'always', scopes]);
+	return [2, 'always', [...packages, ...templates]];
+}
+
+async function getPackageScopes(context = {}) {
+	const project = new LernaProject(context.cwd || process.cwd());
+	const packages = await project.getPackages();
+
+	return packages
+		.map(pkg => pkg.name)
+		.map(name => (name.charAt(0) === '@' ? name.split('/')[1] : name));
+}
+
+function getTemplateScopes(context = {}) {
+	const templates = fs.readdirSync(
+		path.resolve(context.cwd || process.cwd(), 'templates')
+	);
+
+	return templates.map(name => `template/${name}`);
 }
