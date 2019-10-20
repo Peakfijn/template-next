@@ -4,7 +4,8 @@ on:
   pull_request:
     paths:
       - 'templates/**'
-      - '!templates/package/**'
+    paths-ignore:
+      - 'templates/package/**'
 jobs:
   ci:
     name: Install, validate and build
