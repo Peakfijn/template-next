@@ -4,7 +4,7 @@ import { ThemeProvider } from 'src/providers/theme';
 import '@testing-library/jest-dom/extend-expect'
 import 'jest-styled-components';
 
-const TestProvider: React.SFC = (props) => (
+const TestProvider: React.FC = (props) => (
 	<ThemeProvider>
 		{props.children}
 	</ThemeProvider>

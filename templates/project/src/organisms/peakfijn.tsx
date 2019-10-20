@@ -3,7 +3,7 @@ import React from 'react';
 import { Page } from 'src/atoms/page';
 import { AppLogo } from 'src/molecules/app-logo';
 
-export const PeakfijnPage: React.SFC = () => (
+export const PeakfijnPage: React.FC = () => (
 	<Page>
 		<Flex
 			minHeight='100vh'

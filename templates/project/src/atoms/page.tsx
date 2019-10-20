@@ -9,7 +9,7 @@ import {
 	space,
 } from 'styled-system';
 
-export const Page: React.SFC = (props) => (
+export const Page: React.FC = (props) => (
 	<Background
 		backgroundColor='peakfijn'
 		backgroundImage='url("/images/peakfijn-background.svg")'
