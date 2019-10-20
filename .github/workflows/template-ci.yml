@@ -1,9 +1,10 @@
 ---
-name: Template CI
+name: Templates CI
 on:
   pull_request:
     paths:
-      - 'template/**'
+      - 'templates/**'
+      - '!templates/package/**'
 jobs:
   ci:
     name: Install, validate and build
@@ -11,17 +12,17 @@ jobs:
     strategy:
       matrix:
         node: [10, 12]
-        os: [ubuntu-latest, macos-latest]
+        template: [project]
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
-        working-directory: template
+        working-directory: templates/${{ matrix.template }}
       - run: npm run lint
-        working-directory: template
+        working-directory: templates/${{ matrix.template }}
       - run: npm run test
-        working-directory: template
+        working-directory: templates/${{ matrix.template }}
       - run: npm run build
-        working-directory: template
+        working-directory: templates/${{ matrix.template }}
