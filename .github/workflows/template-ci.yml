@@ -8,7 +8,7 @@ on:
 jobs:
   ci:
     name: Install, validate and build
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node: [10, 12]

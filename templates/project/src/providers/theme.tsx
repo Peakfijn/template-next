@@ -9,7 +9,7 @@ const theme = merge(githubTheme, {
 	},
 });
 
-export const ThemeProvider: React.SFC = (props) => (
+export const ThemeProvider: React.FC = (props) => (
 	<StyledThemeProvider theme={theme}>
 		<BaseStyles>
 			{props.children as any}
