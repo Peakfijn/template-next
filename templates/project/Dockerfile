@@ -8,8 +8,8 @@ RUN npm ci
 COPY . ./
 RUN npm run build && npm prune --production
 
-# use lightweight Alpine for production
-FROM node:12-alpine as production
+# use a clean image for production
+FROM node:12 as production
 WORKDIR /app
 # copy all built files for production
 COPY --from=build --chown=node /app ./
