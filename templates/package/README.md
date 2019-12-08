@@ -1,17 +1,17 @@
-# modulename - Peakfijn
+# Next Project-Name - Peakfijn
 
-moduledescription
+project-name for Peakfijn Next projects.
 
 <div align="center">
-	<pre>npm install --save @peakfijn/modulename</pre>
+	<pre>npm install --save @peakfijn/next-project-slug</pre>
 </div>
 
 ## Getting started
 
-To set up modulename, we need to initialize ...
+To set up project-name, we need to initialize ...
 
 ```javascript
-import { hello } from '@peakfijn/modulename';
+import { hello } from '@peakfijn/project-slug';
 
 // call hello to use it
 hello();
