@@ -1,8 +1,12 @@
 {
 	"private": true,
-	"name": "project-name",
+	"name": "project-slug",
 	"version": "0.0.0",
 	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": "git@bitbucket.org:peakfijn/project-slug.git"
+	},
 	"scripts": {
 		"test": "jest",
 		"lint": "tsc && eslint ./src --ext js,jsx,ts,tsx",
