@@ -16,7 +16,7 @@
 		"commit": "git-cz"
 	},
 	"dependencies": {
-		"@primer/components": "^15.2.2",
+		"@primer/components": "^15.2.3",
 		"lodash": "^4.17.15",
 		"next": "^9.2.0",
 		"react": "^16.12.0",
