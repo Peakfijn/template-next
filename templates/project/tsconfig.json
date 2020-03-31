@@ -28,7 +28,6 @@
 	"include": [
 		"src/**/*",
 		"next-env.d.ts",
-		// see: https://github.com/testing-library/jest-dom/issues/123
 		"node_modules/@testing-library/jest-dom/extend-expect.d.ts"
 	]
 }
