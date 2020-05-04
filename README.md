@@ -13,6 +13,7 @@ It contains all basic standards and features of Peakfijn, ready to rock.
 - **Peakfijn linters** — all our standards and conventions ready to go
 - **Deploy to Heroku** — focus on the project, not server maintenance
 - **Pluggable packages** — some projects require different integrations, they are plug-and-play if you need it
+- **Storybook** — a UI component dev environment
 
 ## Create a project
 
