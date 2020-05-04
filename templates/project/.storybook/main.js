@@ -5,7 +5,12 @@ module.exports = {
 			use: [
 				{
 					loader: require.resolve('ts-loader'),
-					options: { compilerOptions: { noEmit: false, jsx: 'react' } },
+					options: {
+						compilerOptions: {
+							noEmit: false,
+							jsx: 'react',
+						},
+					},
 				},
 				{
 					loader: require.resolve('react-docgen-typescript-loader'),
@@ -17,6 +22,10 @@ module.exports = {
 
 		return config;
 	},
-  stories: ['../stories/**/*.stories.(ts|tsx)'],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links'],
+	stories: ['../stories/**/*.stories.(ts|tsx)'],
+	addons: [
+		'@storybook/addon-actions',
+		'@storybook/addon-links',
+		'@storybook/addon-knobs/register',
+	],
 };
