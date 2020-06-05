@@ -59,7 +59,7 @@
 		"jest-styled-components": "^6.3.4",
 		"react-docgen-typescript-loader": "^3.7.2",
 		"ts-loader": "^7.0.5",
-		"typescript": "^3.9.2"
+		"typescript": "^3.9.5"
 	},
 	"commitlint": {
 		"extends": [
