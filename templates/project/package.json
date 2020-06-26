@@ -54,7 +54,7 @@
 		"eslint": "^6.8.0",
 		"eslint-plugin-jest": "^23.17.1",
 		"eslint-plugin-react": "^7.20.0",
-		"eslint-plugin-react-hooks": "^3.0.0",
+		"eslint-plugin-react-hooks": "^4.0.4",
 		"jest": "^25.5.3",
 		"jest-styled-components": "^6.3.4",
 		"react-docgen-typescript-loader": "^3.7.2",
